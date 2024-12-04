@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonies - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            list-style: none;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+        
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .testimonial {
+            display: flex;
+            align-items: flex-start;
+            background: #fff;
+            border-left: 5px solid #0066cc;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            width: 80px;
+            height: 80px;
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+        .testimonial h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 1rem;
+        }
+        .testimonial h4 {
+            font-size: 1rem;
+            color: #777;
+        }
+        .add-testimony-btn {
+            background: #0066cc;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .add-testimony-btn:hover {
+            background: #004b99;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background: #0066cc;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background: #004b99;
+        }
+
+         /* Footer */
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>
+                    <li><a href="services.html">Resources</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="testimony.html" class="active">Testimony</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>What People Are Saying</h1>
+            <p>Here's a collection of testimonies from learners who have been through my learning journey. Their feedback motivates and helps me to improve.</p>
+            
+            <h2>Testimonials</h2>
+            <div class="testimonials" id="testimonialsContainer">
+                <!-- Existing testimonials will go here -->
+            </div><br>
+
+            <button class="add-testimony-btn" onclick="showModal()">Add Your Testimony</button>
+        </div>
+    </section>
+
+    <!-- Modal for Adding Testimony -->
+    <div class="modal" id="testimonyModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add Your Testimony</h2>
+            <form id="testimonyForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required><br><br>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br><br>
+                <label for="picture">Upload Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*"><br><br>
+                <label for="testimonial">Testimony:</label><br>
+                <textarea id="testimonial" name="testimonial" rows="4" required></textarea><br><br>
+                <button type="submit">Submit Testimony</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const testimonialsContainer = document.getElementById('testimonialsContainer');
+
+        // Example of existing testimonials
+        const existingTestimonials = [
+            { name: "Alice Johnson", occupation: "Software Developer", location: "Sydney, Australia", picture: "profile-pic3.jpg", text: "I’ve always struggled with programming, but the interactive lessons in this course helped me overcome my fear of coding. I feel so much more confident now." },
+            { name: "Michael Lee", occupation: "Web Designer", location: "Toronto, Canada", picture: "profile-pic4.jpg", text: "This course offered a unique perspective on design principles. It has made me rethink my design strategies, and I’ve already started applying the techniques I’ve learned." },
+            { name: "Sarah O'Connor", occupation: "Data Scientist", location: "London, UK", picture: "profile-pic1.jpg", text: "An excellent learning resource! The content was structured well and easy to follow. I gained a solid understanding of the subject matter in no time." },
+            { name: "David Thomas", occupation: "Product Manager", location: "New York, USA", picture: "profile-pic2.jpg", text: "This course was comprehensive and practical. I now have the skills I need to take my career to the next level." }
+        ];
+
+        // Function to display testimonials dynamically
+        function displayTestimonials() {
+            existingTestimonials.forEach(testimony => {
+                const testimonialElement = document.createElement('div');
+                testimonialElement.classList.add('testimonial');
+
+                const img = document.createElement('img');
+                img.src = `assets/images/${testimony.picture}`;
+                img.alt = testimony.name;
+
+                const testimonialText = document.createElement('p');
+                testimonialText.textContent = `"${testimony.text}"`;
+
+                const name = document.createElement('h3');
+                name.textContent = testimony.name;
+
+                const occupation = document.createElement('h4');
+                occupation.textContent = `${testimony.occupation} - ${testimony.location}`;
+
+                testimonialElement.appendChild(img);
+                testimonialElement.appendChild(testimonialText);
+                testimonialElement.appendChild(name);
+                testimonialElement.appendChild(occupation);
+
+                testimonialsContainer.appendChild(testimonialElement);
+            });
+        }
+
+        displayTestimonials();
+
+        // Show modal
+        function showModal() {
+            document.getElementById('testimonyModal').style.display = "block";
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('testimonyModal').style.display = "none";
+        }
+
+        // Handle form submission
+        document.getElementById('testimonyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const occupation = document.getElementById('occupation').value;
+            const location = document.getElementById('location').value;
+            const picture = document.getElementById('picture').files[0];
+            const testimonial = document.getElementById('testimonial').value;
+
+            // Create new testimonial object
+            const newTestimony = {
+                name: name,
+                occupation: occupation,
+                location: location,
+                picture: picture ? picture.name : "default.jpg",
+                text: testimonial
+            };
+
+            // Add to the testimonials list and refresh the display
+            existingTestimonials.push(newTestimony);
+            displayTestimonials();
+
+            // Close modal
+            closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A learning journey in web development, focusing on HTML tables and lists">
+    <title>Page Under Construction</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 5rem auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 1rem 0 2rem 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            position: relative;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background: #f4f4f4;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #0066cc;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background-color: #004a99;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li><a href="../../learningjourney.html" class="active">Learning Journey</a></li>
+                    <li class="dropdown">
+                        <a href="#">Resources</a>
+                        <div class="dropdown-menu">
+                            <a href="../../resources.html">Resource 1</a>
+                            <a href="../../tutorials.html">Tutorials</a>
+                            <a href="../../guides.html">Guides</a>
+                        </div>
+                    </li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+            <h1>Page Under Construction</h1>
+            <p>We're working hard to bring this content to life. Check back soon!</p>
+            <a href="../../index.html" class="btn">Return to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+

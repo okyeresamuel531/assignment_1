@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            list-style: none;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .day-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .day-links a:hover {
+            text-decoration: underline;
+        }
+         /* Footer */
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="learningjourney.html" >Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html" class="active">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="introduction">
+                <h2>What is HTML?</h2>
+                <p>HTML, or Hypertext Markup Language, is the backbone of web development. It forms the basic structure and layout of web pages, allowing us to add text, images, links, and other elements to a webpage. Over the course of 25 days, I built my skills from scratch and learned to craft webpages effectively. Ready to explore how I progressed each day?</p>
+            </section>
+        
+            <!-- Day-by-Day Breakdown -->
+            <section class="days">
+                <h2>My Day-by-Day Journey</h2>
+                <p>It took me 25 days (around 600 hours, give or take) to master HTML, and yes, there were some interruptions along the way. But in the end, I succeeded! Below, I’ll walk you through the steps of how I approached this journey.</p>
+                <div class="day-links">
+                    <a href="html-day1.html">Day 1: Introduction to HTML Structure and Tags</a>
+                    <a href="html-day2.html">Day 2: Understanding Elements and Attributes</a>
+                    <a href="html-day3.html">Day 3: Creating Links and Images</a>
+                    <a href="html-day4.html">Day 4: Working with Text and Headings</a>
+                    <a href="html-day5.html">Day 5: Lists, Tables, and Forms</a>
+                    <a href="html-day6.html">Day 6: Advanced HTML Elements</a>
+                    <a href="html-day7.html">Day 7: HTML Validation and Structure</a>
+                    <a href="html-day8.html">Day 8: Creating a Simple HTML Page</a>
+                    <a href="html-day9.html">Day 9: Adding Forms and Input Elements</a>
+                    <a href="html-day10.html">Day 10: Links, Navigation Menus</a>
+                    <a href="html-day11.html">Day 11: Embedding Audio and Video</a>
+                    <a href="html-day12.html">Day 12: HTML Accessibility</a>
+                    <a href="html-day13.html">Day 13: HTML Semantic Elements</a>
+                    <a href="html-day14.html">Day 14: Introduction to HTML5</a>
+                    <a href="html-day15.html">Day 15: Building a Web Page Project</a>
+                    <a href="html-day16.html">Day 16: Working with Forms and Buttons</a>
+                    <a href="html-day17.html">Day 17: HTML Tables and Forms Styling</a>
+                    <a href="html-day18.html">Day 18: Creating a Blog Layout with HTML</a>
+                    <a href="html-day19.html">Day 19: HTML Forms and Data</a>
+                    <a href="html-day20.html">Day 20: Advanced HTML Validation</a>
+                    <a href="html-day21.html">Day 21: Final HTML Project</a>
+                    <a href="html-day22.html">Day 22: Debugging HTML</a>
+                    <a href="html-day23.html">Day 23: Custom Tags and Best Practices</a>
+                    <a href="html-day24.html">Day 24: Final Project</a>
+                    <a href="html-day25.html">Day 25: Finalization and Presentation</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

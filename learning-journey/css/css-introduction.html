@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A learning journey in web development, with a focus on HTML, CSS, Java, and other technologies">
+    <title>Introduction to CSS - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .day-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .day-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #0066cc;
+        }
+
+        /* My Learning Button Styling */
+        .my-learning-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .my-learning-btn:hover {
+            background-color: #004a99;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html" class="active">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>                    
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="introduction">
+                <h2>What is CSS?</h2>
+                <p>CSS (Cascading Style Sheets) is used to describe the presentation of a web page written in HTML or XML. CSS defines how elements should be displayed, such as fonts, colors, layout, and spacing.</p>
+                <p>Throughout my learning journey, I explored various CSS concepts, and here I will showcase the different stages of my progress.</p>
+            </section>
+        
+            <!-- Day-by-Day Breakdown -->
+            <section class="days">
+                <h2>My Day-by-Day Journey</h2>
+                <p>It took me 30 days (around 600 hours, give or take) to master CSS. Below is how I progressed each day:</p>
+                <div class="day-links">
+                    <a href="css-day1.html">Day 1: Introduction to CSS Basics</a>
+                    <a href="css-day2.html">Day 2: Understanding CSS Selectors</a>
+                    <a href="css-day3.html">Day 3: Styling Text and Fonts</a>
+                    <a href="css-day4.html">Day 4: Layout with Box Model</a>
+                    <a href="css-day5.html">Day 5: Flexbox Basics</a>
+                    <a href="css-day6.html">Day 6: Advanced Flexbox</a>
+                    <a href="css-day7.html">Day 7: CSS Grid Layout</a>
+                    <a href="css-day8.html">Day 8: Positioning and Z-Index</a>
+                    <a href="css-day9.html">Day 9: Responsive Design with Media Queries</a>
+                    <a href="css-day10.html">Day 10: Custom Fonts with @font-face</a>
+                    <a href="css-day11.html">Day 11: Animations and Transitions</a>
+                    <a href="css-day12.html">Day 12: Transform Property</a>
+                    <a href="css-day13.html">Day 13: Pseudo-Classes and Pseudo-Elements</a>
+                    <a href="css-day14.html">Day 14: CSS Variables</a>
+                    <a href="css-day15.html">Day 15: Advanced Selectors</a>
+                    <a href="css-day16.html">Day 16: Working with Images</a>
+                    <a href="css-day17.html">Day 17: Typography and Line Height</a>
+                    <a href="css-day18.html">Day 18: Shadow Effects</a>
+                    <a href="css-day19.html">Day 19: Advanced Box Model</a>
+                    <a href="css-day20.html">Day 20: Media Queries for Mobile Design</a>
+                    <a href="css-day21.html">Day 21: Forms Styling</a>
+                    <a href="css-day22.html">Day 22: Web Accessibility (A11Y)</a>
+                    <a href="css-day23.html">Day 23: CSS Custom Properties (Variables)</a>
+                    <a href="css-day24.html">Day 24: Advanced CSS Grid</a>
+                    <a href="css-day25.html">Day 25: CSS Best Practices</a>
+                    <a href="css-day26.html">Day 26: Preprocessors (Sass)</a>
+                    <a href="css-day27.html">Day 27: PostCSS for Better CSS</a>
+                    <a href="css-day28.html">Day 28: Using CSS with Frameworks (Bootstrap)</a>
+                    <a href="css-day29.html">Day 29: Final Project</a>
+                    <a href="css-day30.html">Day 30: Review and Final Thoughts</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Python - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f4f4f4;
+            border: 1px solid #ccc;
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .dropdown-content li {
+            border-bottom: 1px solid #ccc;
+        }
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .day-links ul {
+            padding: 0;
+            list-style: none;
+        }
+        .day-links ul li {
+            margin-bottom: 10px;
+        }
+        .day-links ul li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .day-links ul li a:hover {
+            text-decoration: underline;
+        }
+         /* Footer */
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html" class="active">Python</a></li>
+                        </ul>                    
+                    </li>                    
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Welcome to Python Learning Journey</h1>
+            <p>Python is a powerful, high-level programming language that's easy to learn and widely used in various fields like web development, data science, machine learning, and automation. Below is a 60-day structured plan to master Python basics and beyond!</p>
+            
+            <h2>Day-by-Day Learning Schedule</h2>
+            <div class="day-links">
+                <ul>
+                    <li><a href="day1.html"><strong>Day 1:</strong> Introduction to Python - What is Python?</a></li>
+                    <li><a href="day2.html"><strong>Day 2:</strong> Setting Up Python and Your IDE</a></li>
+                    <li><a href="day3.html"><strong>Day 3:</strong> Understanding Variables and Data Types</a></li>
+                    <li><a href="day4.html"><strong>Day 4:</strong> Operators and Expressions in Python</a></li>
+                    <li><a href="day5.html"><strong>Day 5:</strong> Working with Strings</a></li>
+                    <li><a href="day6.html"><strong>Day 6:</strong> Lists and Tuples</a></li>
+                    <li><a href="day7.html"><strong>Day 7:</strong> Dictionaries and Sets</a></li>
+                    <li><a href="day8.html"><strong>Day 8:</strong> Control Flow: if, elif, else</a></li>
+                    <li><a href="day9.html"><strong>Day 9:</strong> Loops: for and while</a></li>
+                    <li><a href="day10.html"><strong>Day 10:</strong> Functions: Creating Reusable Code</a></li>
+                    <li><a href="day11.html"><strong>Day 11:</strong> Arguments and Return Values</a></li>
+                    <li><a href="day12.html"><strong>Day 12:</strong> Exception Handling: try, except, finally</a></li>
+                    <li><a href="day13.html"><strong>Day 13:</strong> File Handling: Reading and Writing Files</a></li>
+                    <li><a href="day14.html"><strong>Day 14:</strong> Introduction to Modules and Libraries</a></li>
+                    <li><a href="day15.html"><strong>Day 15:</strong> Python's Math and Random Modules</a></li>
+                    <li><a href="day16.html"><strong>Day 16:</strong> Working with Date and Time</a></li>
+                    <li><a href="day17.html"><strong>Day 17:</strong> Understanding List Comprehensions</a></li>
+                    <li><a href="day18.html"><strong>Day 18:</strong> Introduction to Object-Oriented Programming (OOP)</a></li>
+                    <li><a href="day19.html"><strong>Day 19:</strong> Classes and Objects</a></li>
+                    <li><a href="day20.html"><strong>Day 20:</strong> Methods and Constructors</a></li>
+                    <li><a href="day21.html"><strong>Day 21:</strong> Inheritance and Polymorphism</a></li>
+                    <li><a href="day22.html"><strong>Day 22:</strong> Working with Iterators and Generators</a></li>
+                    <li><a href="day23.html"><strong>Day 23:</strong> Understanding Decorators</a></li>
+                    <li><a href="day24.html"><strong>Day 24:</strong> Introduction to Regular Expressions</a></li>
+                    <li><a href="day25.html"><strong>Day 25:</strong> Working with Python's JSON Module</a></li>
+                    <li><a href="day26.html"><strong>Day 26:</strong> Introduction to NumPy for Array Operations</a></li>
+                    <li><a href="day27.html"><strong>Day 27:</strong> Pandas for Data Analysis</a></li>
+                    <li><a href="day28.html"><strong>Day 28:</strong> Data Visualization with Matplotlib</a></li>
+                    <li><a href="day29.html"><strong>Day 29:</strong> Working with APIs</a></li>
+                    <li><a href="day30.html"><strong>Day 30:</strong> Introduction to Web Scraping</a></li>
+                    <li><a href="day31.html"><strong>Day 31:</strong> Automating Tasks with Python</a></li>
+                    <li><a href="day32.html"><strong>Day 32:</strong> Understanding Unit Testing</a></li>
+                    <li><a href="day33.html"><strong>Day 33:</strong> Working with Databases</a></li>
+                    <li><a href="day34.html"><strong>Day 34:</strong> Python and SQLite</a></li>
+                    <li><a href="day35.html"><strong>Day 35:</strong> Introduction to Flask Framework</a></li>
+                    <li><a href="day36.html"><strong>Day 36:</strong> Building a Simple Web App with Flask</a></li>
+                    <li><a href="day37.html"><strong>Day 37:</strong> Introduction to Django Framework</a></li>
+                    <li><a href="day38.html"><strong>Day 38:</strong> Building a Django Project</a></li>
+                    <li><a href="day39.html"><strong>Day 39:</strong> Python for Machine Learning: An Overview</a></li>
+                    <li><a href="day40.html"><strong>Day 40:</strong> Introduction to TensorFlow</a></li>
+                    <li><a href="day41.html"><strong>Day 41:</strong> Working with Scikit-learn</a></li>
+                    <li><a href="day42.html"><strong>Day 42:</strong> Introduction to Data Cleaning</a></li>
+                    <li><a href="day43.html"><strong>Day 43:</strong> Basics of Data Visualization</a></li>
+                    <li><a href="day44.html"><strong>Day 44:</strong> Python for Web Automation</a></li>
+                    <li><a href="day45.html"><strong>Day 45:</strong> Working with Selenium</a></li>
+                    <li><a href="day46.html"><strong>Day 46:</strong> Python for Networking</a></li>
+                    <li><a href="day47.html"><strong>Day 47:</strong> Introduction to Tkinter for GUIs</a></li>
+                    <li><a href="day48.html"><strong>Day 48:</strong> Building a Simple GUI Application</a></li>
+                    <li><a href="day49.html"><strong>Day 49:</strong> Introduction to Python's asyncio</a></li>
+                    <li><a href="day50.html"><strong>Day 50:</strong> Writing Asynchronous Code</a></li>
+                    <li><a href="day51.html"><strong>Day 51:</strong> Exploring Python's Data Science Ecosystem</a></li>
+                    <li><a href="day52.html"><strong>Day 52:</strong> Understanding Python Packaging</a></li>
+                    <li><a href="day53.html"><strong>Day 53:</strong> Working with Python's Virtual Environment</a></li>
+                    <li><a href="day54.html"><strong>Day 54:</strong> Writing Pythonic Code</a></li>
+                    <li><a href="day55.html"><strong>Day 55:</strong> Advanced Debugging Techniques</a></li>
+                    <li><a href="day56.html"><strong>Day 56:</strong> Contributing to Open Source</a></li>
+                    <li><a href="day57.html"><strong>Day 57:</strong> Exploring Python's Ecosystem</a></li>
+                    <li><a href="day58.html"><strong>Day 58:</strong> Python Performance Optimization</a></li>
+                    <li><a href="day59.html"><strong>Day 59:</strong> Real-World Project: Building a To-Do App</a></li>
+                    <li><a href="day60.html"><strong>Day 60:</strong> Review, Wrap-Up, and Next Steps</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>Connect with us on social media:</p>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+    </div>
+</footer>
+</body>
+</html>

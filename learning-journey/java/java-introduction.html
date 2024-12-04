@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Java programming through various stages, starting from the basics to advanced concepts">
+    <title>Introduction to Java - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .day-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .day-links a:hover {
+            text-decoration: underline;
+        }
+         /* Footer */
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* My Learning Button Styling */
+        .my-learning-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .my-learning-btn:hover {
+            background-color: #004a99;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html" class="active">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>                    
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="introduction">
+                <h2>What is Java?</h2>
+                <p>Java is a popular, class-based, object-oriented programming language designed for portability across platforms. It is used for building a wide range of applications, from web development to mobile and enterprise solutions.</p>
+                <p>Throughout my learning journey, I explored Java concepts, starting from the basics to more advanced topics. Below is a breakdown of my journey in learning Java.</p>
+            </section>
+        
+            <!-- Day-by-Day Breakdown -->
+            <section class="days">
+                <h2>My Day-by-Day Journey</h2>
+                <p>It took me around 35 days to get a good understanding of Java. Here are the topics I covered:</p>
+                <div class="day-links">
+                    <a href="java-day1.html">Day 1: Introduction to Java Basics</a>
+                    <a href="java-day2.html">Day 2: Setting up Java Development Environment</a>
+                    <a href="java-day3.html">Day 3: Variables and Data Types</a>
+                    <a href="java-day4.html">Day 4: Control Flow (if, else, switch)</a>
+                    <a href="java-day5.html">Day 5: Loops (for, while)</a>
+                    <a href="java-day6.html">Day 6: Methods and Functions</a>
+                    <a href="java-day7.html">Day 7: Arrays and Collections</a>
+                    <a href="java-day8.html">Day 8: Object-Oriented Programming (OOP)</a>
+                    <a href="java-day9.html">Day 9: Classes and Objects</a>
+                    <a href="java-day10.html">Day 10: Inheritance and Polymorphism</a>
+                    <a href="java-day11.html">Day 11: Abstraction and Encapsulation</a>
+                    <a href="java-day12.html">Day 12: Exception Handling</a>
+                    <a href="java-day13.html">Day 13: File Handling</a>
+                    <a href="java-day14.html">Day 14: Multithreading</a>
+                    <a href="java-day15.html">Day 15: Java Streams and Lambda Expressions</a>
+                    <a href="java-day16.html">Day 16: Collections Framework</a>
+                    <a href="java-day17.html">Day 17: Generics in Java</a>
+                    <a href="java-day18.html">Day 18: Java Networking</a>
+                    <a href="java-day19.html">Day 19: Java GUI with Swing</a>
+                    <a href="java-day20.html">Day 20: Working with Databases (JDBC)</a>
+                    <a href="java-day21.html">Day 21: JavaFX Basics</a>
+                    <a href="java-day22.html">Day 22: Spring Framework Introduction</a>
+                    <a href="java-day23.html">Day 23: Testing in Java (JUnit)</a>
+                    <a href="java-day24.html">Day 24: Design Patterns</a>
+                    <a href="java-day25.html">Day 25: Java 8+ Features</a>
+                    <a href="java-day26.html">Day 26: Best Practices</a>
+                    <a href="java-day27.html">Day 27: Building Java Projects</a>
+                    <a href="java-day28.html">Day 28: Spring Boot</a>
+                    <a href="java-day29.html">Day 29: Java Performance Optimization</a>
+                    <a href="java-day30.html">Day 30: Concurrency in Java</a>
+                    <a href="java-day31.html">Day 31: Advanced Java Topics</a>
+                    <a href="java-day32.html">Day 32: Java Web Development</a>
+                    <a href="java-day33.html">Day 33: RESTful APIs in Java</a>
+                    <a href="java-day34.html">Day 34: Building Java Applications for Android</a>
+                    <a href="java-day35.html">Day 35: Final Review and Wrap-up</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+        <p>Connect with us on social media:</p>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+    </div>
+</footer>
+    
+</body>
+</html>

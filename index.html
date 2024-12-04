@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Programming Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            list-style: none;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .btn-primary, .btn-secondary {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+        }
+
+        .btn-primary:hover {
+            background: #004c99;
+        }
+
+        .btn-secondary {
+            background: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #555;
+        }
+
+        /* Responsive Button Adjustments */
+        @media (max-width: 768px) {
+            .btn-primary,
+            .btn-secondary {
+                width: 100%; /* Makes buttons full-width on small screens */
+                padding: 1rem 0; /* Increase vertical padding for better touch targets */
+                margin: 1rem 0; /* Adds vertical margin to space out buttons */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-primary,
+            .btn-secondary {
+                font-size: 1.2rem; /* Adjust font size on very small screens */
+                padding: 1.2rem 0; /* Slightly more padding for touch screens */
+            }
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers text vertically */
+            height: 100vh; /* Ensures the container takes up the full height of the page */
+            text-align: center; /* Ensures the text is centered within its container */
+        }
+
+        .about-text {
+            padding: 20px;
+            font-size: 24px; /* Adjust font size as needed */
+            line-height: 1.5; /* Adjust line height for readability */
+        }
+
+        .about-image img {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            border-radius: 50%; /* This makes the image round */
+            object-fit: cover; /* Ensures the image doesn't stretch */
+        }
+
+        /* Purpose Section */
+        .purpose {
+            padding: 3rem 0;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .purpose h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Highlights Section */
+        .highlights {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .highlights h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-item {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlights-grid .highlight-item img {
+            width: 60px; /* Desired width for highlight icons */
+            height: 60px; /* Desired height for highlight icons */
+            margin-bottom: 1rem; /* Adds space between the icon and the text */
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>
+                    <li><a href="services.html">Resources</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to My Programming Journey</h1>
+                <p>Discover how I transitioned into the world of programming, the lessons I learned, and how you can start your own journey.</p>
+                <a href="about.html" class="btn-primary">Learn More</a>
+                <a href="#journey" class="btn-secondary">Start Exploring</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purpose Section -->
+    <section class="purpose" id="journey">
+        <div class="container">
+            <h2>Purpose of This Website</h2>
+            <p>This website is a platform where I share my programming journey, including challenges, triumphs, and lessons. My goal is to inspire and encourage others to start their own journey in programming and technology.</p>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <h2>What You'll Find Here</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <img src="assets/images/learning-process-icon.png" alt="Learning Process Icon">
+                    <h3>My Learning Process</h3>
+                    <p>A step-by-step breakdown of how I learned different programming languages, starting with HTML.</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="assets/images/tips-resources-icon.png" alt="Tips and Resources Icon">
+                    <h3>Tips and Resources</h3>
+                    <p>Helpful advice and resources for beginners looking to start their coding journey.</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="assets/images/daily-progress-icon.png" alt="Daily Progress Icon">
+                    <h3>Daily Progress</h3>
+                    <p>Detailed documentation of my learning progress over 30 days for each programming language.</p>
+                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

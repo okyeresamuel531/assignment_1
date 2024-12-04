@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Resources</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            list-style: none;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 3rem 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .resources h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-item {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-item p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-item a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-item a:hover {
+            color: #004c99;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+
+                    <li class="dropdown">
+                        <a href="learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>
+                    
+                    <li><a href="services.html" class="active">Resources</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <h2>Programming Resources</h2>
+            <p>Explore a variety of useful resources to help you along your programming journey. From coding tutorials to helpful tools, these resources will guide you every step of the way.</p>
+            <div class="resources-grid">
+                <!-- Resource Item 1 -->
+                <div class="resource-item">
+                    <h3>Free Code Camps</h3>
+                    <p>Find coding camps offering free tutorials on a wide range of programming languages and frameworks.</p>
+                    <a href="https://www.freecodecamp.org" target="_blank">Visit FreeCodeCamp</a>
+                </div>
+
+                <!-- Resource Item 2 -->
+                <div class="resource-item">
+                    <h3>JavaScript Documentation</h3>
+                    <p>Official JavaScript documentation for developers. Comprehensive and up-to-date.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Visit MDN Web Docs</a>
+                </div>
+
+                <!-- Resource Item 3 -->
+                <div class="resource-item">
+                    <h3>Python for Beginners</h3>
+                    <p>A beginner-friendly tutorial series to get you started with Python programming.</p>
+                    <a href="https://www.python.org/about/gettingstarted/" target="_blank">Get Started with Python</a>
+                </div>
+
+                <!-- Resource Item 4 -->
+                <div class="resource-item">
+                    <h3>Codecademy</h3>
+                    <p>Interactive coding lessons in languages like HTML, CSS, JavaScript, Python, and more.</p>
+                    <a href="https://www.codecademy.com" target="_blank">Visit Codecademy</a>
+                </div>
+
+                <!-- Resource Item 5 -->
+                <div class="resource-item">
+                    <h3>GitHub Repositories</h3>
+                    <p>Find a wealth of open-source projects and tools on GitHub to collaborate on or use in your own work.</p>
+                    <a href="https://github.com" target="_blank">Explore GitHub</a>
+                </div>
+
+                <!-- Resource Item 6 -->
+                <div class="resource-item">
+                    <h3>Stack Overflow</h3>
+                    <p>Join the largest online developer community to ask questions, share knowledge, and solve problems.</p>
+                    <a href="https://stackoverflow.com" target="_blank">Visit Stack Overflow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

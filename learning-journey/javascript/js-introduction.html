@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning JavaScript programming from the basics to advanced concepts in a 45-day journey.">
+    <title>Introduction to JavaScript - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+        h1, h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .day-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .day-links a:hover {
+            text-decoration: underline;
+        }
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* My Learning Button Styling */
+        .my-learning-btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .my-learning-btn:hover {
+            background-color: #004a99;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html" class="active">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>                    
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="introduction">
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript is a versatile programming language commonly used for creating interactive websites and web applications. It is an essential technology for front-end development and has gained popularity for server-side applications as well.</p>
+                <p>During my journey, I learned JavaScript fundamentals and explored more advanced concepts such as asynchronous programming, working with APIs, and frameworks like React.</p>
+            </section>
+        
+            <!-- Day-by-Day Breakdown -->
+            <section class="days">
+                <h2>My Day-by-Day Journey</h2>
+                <p>It took me 45 days to understand JavaScript comprehensively. Below is the breakdown of topics I covered:</p>
+                <div class="day-links">
+                    <a href="javascript-day1.html">Day 1: Introduction to JavaScript</a>
+                    <a href="javascript-day2.html">Day 2: Setting up the Development Environment</a>
+                    <a href="javascript-day3.html">Day 3: JavaScript Syntax and Variables</a>
+                    <a href="javascript-day4.html">Day 4: Data Types and Operators</a>
+                    <a href="javascript-day5.html">Day 5: Control Flow (if, else, switch)</a>
+                    <a href="javascript-day6.html">Day 6: Loops (for, while, do-while)</a>
+                    <a href="javascript-day7.html">Day 7: Functions and Scope</a>
+                    <a href="javascript-day8.html">Day 8: Arrays and Array Methods</a>
+                    <a href="javascript-day9.html">Day 9: Objects and Object-Oriented Concepts</a>
+                    <a href="javascript-day10.html">Day 10: DOM Manipulation</a>
+                    <a href="javascript-day11.html">Day 11: Events in JavaScript</a>
+                    <a href="javascript-day12.html">Day 12: JavaScript and Forms</a>
+                    <a href="javascript-day13.html">Day 13: Asynchronous Programming (Callbacks)</a>
+                    <a href="javascript-day14.html">Day 14: Promises and Async/Await</a>
+                    <a href="javascript-day15.html">Day 15: Error Handling and Try/Catch</a>
+                    <a href="javascript-day16.html">Day 16: Working with JSON</a>
+                    <a href="javascript-day17.html">Day 17: JavaScript Closures</a>
+                    <a href="javascript-day18.html">Day 18: ES6 Features (let, const, arrow functions)</a>
+                    <a href="javascript-day19.html">Day 19: Template Literals</a>
+                    <a href="javascript-day20.html">Day 20: Destructuring and Spread Operator</a>
+                    <a href="javascript-day21.html">Day 21: Classes and Inheritance</a>
+                    <a href="javascript-day22.html">Day 22: Modules in JavaScript</a>
+                    <a href="javascript-day23.html">Day 23: JavaScript and APIs</a>
+                    <a href="javascript-day24.html">Day 24: Fetch API and AJAX</a>
+                    <a href="javascript-day25.html">Day 25: JavaScript and Databases</a>
+                    <a href="javascript-day26.html">Day 26: Introduction to Node.js</a>
+                    <a href="javascript-day27.html">Day 27: Express.js Basics</a>
+                    <a href="javascript-day28.html">Day 28: Building RESTful APIs with Node.js</a>
+                    <a href="javascript-day29.html">Day 29: JavaScript Frameworks (React Introduction)</a>
+                    <a href="javascript-day30.html">Day 30: Understanding React Components</a>
+                    <a href="javascript-day31.html">Day 31: State and Props in React</a>
+                    <a href="javascript-day32.html">Day 32: React Router and Navigation</a>
+                    <a href="javascript-day33.html">Day 33: React Hooks Overview</a>
+                    <a href="javascript-day34.html">Day 34: Performance Optimization in JavaScript</a>
+                    <a href="javascript-day35.html">Day 35: Final Review and Wrap-up</a>
+                    <a href="javascript-day36.html">Day 36: Introduction to Testing in JavaScript</a>
+                    <a href="javascript-day37.html">Day 37: Unit Testing with Jest</a>
+                    <a href="javascript-day38.html">Day 38: Test-Driven Development</a>
+                    <a href="javascript-day39.html">Day 39: Debugging JavaScript Code</a>
+                    <a href="javascript-day40.html">Day 40: Webpack and Module Bundling</a>
+                    <a href="javascript-day41.html">Day 41: JavaScript and Web Security</a>
+                    <a href="javascript-day42.html">Day 42: Advanced JavaScript Concepts</a>
+                    <a href="javascript-day43.html">Day 43: Real-World JavaScript Applications</a>
+                    <a href="javascript-day44.html">Day 44: Optimizing JavaScript Code for Production</a>
+                    <a href="javascript-day45.html">Day 45: Final Review and Project Showcase</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+        <p>Connect with us on social media:</p>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+    </div>
+</footer>
+    
+</body>
+</html>

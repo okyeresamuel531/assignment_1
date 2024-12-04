@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1: Introduction to HTML Structure and Tags - My Learning Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+
+        h1,
+        h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .day-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .day-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #0066cc;
+        }
+
+        .example-code {
+            background: #f9f9f9;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.5rem;
+        }
+
+        .output {
+            padding: 1rem;
+            background: #e9f7ff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .interactive {
+            background-color: #0066cc;
+            color: white;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .interactive:hover {
+            background-color: #005bb5;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', monospace;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li><a href="../../learningjourney.html">Learning Journey</a></li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                    <li><a href="../../testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <!-- Introduction -->
+            <section class="introduction">
+                <h2>What is HTML?</h2>
+                <p>HTML stands for Hypertext Markup Language. It is the language used to structure and display content on the web. Every webpage you visit is made with HTML. The structure of an HTML document is formed by elements, which consist of tags that tell the browser how to display content. This is what we call a "markup" language.</p>
+                <p>In this lesson, we will go through the basic structure of an HTML document and understand how tags work to form that structure.</p>
+            </section>
+
+            <!-- Day 1 Topic -->
+            <section class="content">
+                <h2>Day 1: HTML Structure & Tags</h2>
+                <p>Let’s explore the structure of an HTML document. Every HTML document starts with a doctype declaration, followed by the <code>&lt;html&gt;</code> tag. Inside the <code>&lt;html&gt;</code> tag, there are two main sections: the <code>&lt;head&gt;</code> and the <code>&lt;body&gt;</code>.</p>
+
+                <h3>Basic HTML Structure</h3>
+                <div class="example-code">
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;My First HTML Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to My First Web Page&lt;/h1&gt;
+        &lt;p&gt;This is my first webpage using HTML!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+                <div class="output">
+                    <h1>Welcome to My First Web Page</h1>
+                    <p>This is my first webpage using HTML!</p>
+                </div>
+
+                <p>In the example above:</p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code>: Defines the document type and version of HTML (HTML5 in this case).</li>
+                    <li><code>&lt;html&gt;</code>: The root element that contains all other HTML elements.</li>
+                    <li><code>&lt;head&gt;</code>: Contains meta-information about the document like character set, viewport settings, and the title of the page.</li>
+                    <li><code>&lt;body&gt;</code>: Contains the actual content of the webpage, such as headings and paragraphs.</li>
+                    <li><code>&lt;h1&gt;</code>: Defines a top-level heading.</li>
+                    <li><code>&lt;p&gt;</code>: Defines a paragraph of text.</li>
+                </ul>
+
+                <h3>Interactive Exercise: Try Modifying the HTML</h3>
+                <p>Try changing the content inside the <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> tags to see how it affects the page.</p>
+
+                <h2>Interactive HTML Editor</h2>
+                <p>Test out your HTML knowledge using the interactive editor below. Modify the code and click "Run Code" to see your changes in real-time!</p>
+                <div class="interactive">
+                    <textarea id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Interactive Trial&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Change this text and see the result below!&lt;/p&gt;
+    &lt;p&gt;Add your own HTML tags and experiment.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                    </textarea>
+                    <button onclick="runCode()">Run Code</button>
+                    <iframe id="output" style="width: 100%; height: 300px;"></iframe>
+                </div>
+            </section>
+
+            <!-- Day-by-Day Breakdown -->
+            <section class="days">
+                <h2>My Day-by-Day Journey</h2>
+                <p>HTML is the foundation of web development. On my learning journey, I am going to break down the lessons into days to keep track of the concepts I learn.</p>
+                <div class="day-links">
+                    <a href="day2.html">Day 2: Styling with CSS</a>
+                    <a href="day3.html">Day 3: Adding Interactivity with JavaScript</a>
+                    <a href="day4.html">Day 4: Advanced HTML Elements</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById("html-code").value;
+            const iframe = document.getElementById("output");
+            iframe.srcdoc = code;
+        }
+    </script>
+</body>
+
+</html>

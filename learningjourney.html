@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Journey - My Programming Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+        }
+
+        .dropdown-content li {
+            padding: 10px;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #0066cc;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 3rem 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .content .highlight {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .content .highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content .highlight p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Motivational Section */
+        .motivation {
+            background: #0066cc;
+            color: #fff;
+            padding: 3rem 0;
+        }
+
+        .motivation h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .motivation p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="learningjourney.html" class="active">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Resources</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Your Learning Journey!</h1>
+            <p>Empower yourself with the knowledge of programming languages to unlock endless opportunities!</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Your Learning Journey Starts Here!</h2>
+            <p>Are you ready to embark on your programming journey? Let’s explore some popular programming languages that will help you unlock endless possibilities. Read on to find the best programming language for your career goals and start building your future today.</p>
+
+            <div class="highlight">
+                <h3>HTML - The Backbone of Web Development</h3>
+                <p>HTML (Hypertext Markup Language) is the foundation of web development. It's used to create the structure of web pages by defining the layout, content, and links. Whether you want to design simple web pages or complex web applications, learning HTML is the first step. <a href="learning-journey/html/html-Introduction.html">Learn HTML</a></p>
+            </div>
+
+            <div class="highlight">
+                <h3>CSS - Styling the Web</h3>
+                <p>CSS (Cascading Style Sheets) allows you to add style to your web pages. It's used to control the layout, colors, fonts, and overall design of a website. Mastering CSS will give you the power to create visually appealing websites and give your HTML structure life. <a href="learning-journey/css/css-introduction.html">Learn CSS</a></p>
+            </div>
+
+            <div class="highlight">
+                <h3>Java - Building Robust Applications</h3>
+                <p>Java is a powerful, object-oriented programming language used in everything from Android app development to enterprise-level applications. It’s widely used due to its portability, scalability, and large community of developers. If you want to develop mobile apps or work in large-scale enterprise environments, Java is an excellent choice. <a href="learning-journey/java/java-introduction.html">Learn Java</a></p>
+            </div>
+
+            <div class="highlight">
+                <h3>JavaScript - Making Web Pages Interactive</h3>
+                <p>JavaScript is the language of the web. It allows you to create dynamic, interactive web pages by manipulating HTML and CSS. If you want to work in web development, JavaScript is essential for building interactive websites and applications. It’s also used in back-end development with Node.js. <a href="learning-journey/javascript/js-introduction.html">Learn JavaScript</a></p>
+            </div>
+
+            <div class="highlight">
+                <h3>Python - The Beginner's Language for Everything</h3>
+                <p>Python is known for its simple syntax and versatility. It’s used in a wide range of applications from web development to data analysis, machine learning, and automation. If you are just starting out, Python is often recommended due to its ease of learning. <a href="learning-journey/python/python-introduction.html">Learn Python</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Section -->
+    <section class="motivation">
+        <div class="container">
+            <h2>Stay Motivated, Keep Coding!</h2>
+            <p>Learning to code is not always easy, but every step forward brings you closer to mastering new skills and unlocking new opportunities. No matter what language you start with, keep going, keep coding, and you’ll be amazed at what you can achieve!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+            <div class="footer-content">
+                <p>Connect with us on social media:</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+                <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+            </div>
+        </footer>
+    
+</body>
+</html>

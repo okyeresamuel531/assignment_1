@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Programming Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            list-style: none;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .btn-primary, .btn-secondary {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+        }
+
+        .btn-primary:hover {
+            background: #004c99;
+        }
+
+        .btn-secondary {
+            background: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #555;
+        }
+
+        /* Responsive Button Adjustments */
+        @media (max-width: 768px) {
+            .btn-primary,
+            .btn-secondary {
+                width: 100%; /* Makes buttons full-width on small screens */
+                padding: 1rem 0; /* Increase vertical padding for better touch targets */
+                margin: 1rem 0; /* Adds vertical margin to space out buttons */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-primary,
+            .btn-secondary {
+                font-size: 1.2rem; /* Adjust font size on very small screens */
+                padding: 1.2rem 0; /* Slightly more padding for touch screens */
+            }
+        }
+
+        /* About Section */
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .about-text {
+            padding: 20px;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .about-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Purpose Section */
+        .purpose {
+            padding: 3rem 0;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .purpose h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Highlights Section */
+        .highlights {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .highlights h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-item {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="learning-journey/html/html-Introduction.html">HTML</a></li>
+                            <li><a href="learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>                    
+                    </li>
+                    </li>
+                    <li><a href="services.html">Resources</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="testimony.html">Testimonies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="container">
+            <div class="about-me-content">
+                <div class="about-text">
+                    <h2 style="text-align: center;">About Me</h2>
+
+                    <div class="about-image">
+                        <img src="assets/images/samuel-okyere.jpg" alt="Samuel Okyere" />
+                    </div>
+
+                    <h3>Hello! I'm Samuel Okyere 👋</h3>
+
+                    <p>Welcome to my programming journey! 🚀 I am an 21-year-old Computer Science student at Ghana Communication Technology University, currently in my second year. My passion for coding and problem-solving drives me to explore new technologies and build innovative solutions 💡.</p>
+                    <p>I started my journey as a complete beginner, and now, I'm proficient in various programming languages such as JavaScript, Python, Java, HTML/CSS, and PHP. 🖥️ I enjoy working on projects like web development, data analysis, and algorithms, and I am always looking for opportunities to improve my skills and collaborate on new challenges 🧑‍🤝‍🧑.</p>
+                    <p>In my free time, I love exploring emerging technologies such as AI and machine learning 🤖, participating in online coding challenges, and sharing my knowledge with others 📚. I hope to inspire other aspiring developers and show them that with dedication and practice, anyone can master programming. 💪</p>
+
+                    <h2 style="text-align: center;">My Experience 🧑‍💻</h2>
+
+                    <p> When I began my programming journey, it felt like stepping into an entirely new universe filled with endless opportunities but equally daunting challenges 🌌. I remember the thrill of writing my first line of code, a sense of accomplishment that quickly faded as I realized just how complex the world of programming truly was. Concepts like syntax, debugging, and algorithms seemed like a foreign language, and understanding them felt almost impossible at times. Every error message felt like a roadblock 🛑, and every failed attempt to solve a problem made me question whether I was truly cut out for this.</p>
+                    <p>There were countless nights 🌙 where I sat staring at my screen, feeling completely defeated. The simplest tasks would take hours, and I often felt like I was moving at a snail’s pace 🐌 while others around me seemed to breeze through the same challenges with ease. Watching my peers excel while I struggled made me doubt myself even more. I thought of quitting many times 😓. In those moments of frustration, it felt like the logical choice—to give up and find something less demanding, something that didn’t push me so far out of my comfort zone.</p> 
+                    <p>But something deep inside kept me going 🧠. I reminded myself that no one starts as an expert, and the people I admired in this field had once been beginners too. I clung to the belief that growth doesn’t happen without struggle, and every error, every failed attempt, was teaching me something new 📈. Each time I debugged a problem successfully, no matter how small, it fueled my determination to keep going 🔥.</p>
+
+                    <p> Slowly but surely, I began to understand the logic behind the code, the patterns in the errors, and how to break down complex problems into manageable pieces 🧩. The more I practiced, the more I improved, and eventually, the frustration turned into excitement 🎉.</p>
+
+                    <p> Now, when I encounter challenges, I see them as opportunities to grow 💪. I’ve come a long way from that beginner who felt lost and discouraged, and I’m proud of the progress I’ve made 🌟. This journey hasn’t been easy, but it’s been incredibly rewarding, and I wouldn’t trade the experience for anything 🔄.</p>
+   
+                    <h2>Acknowledgements 🙏</h2>
+                    <p>I would like to express my heartfelt thanks to the following people and communities who have played a significant role in my journey:</p>
+                    <ul>
+                        <li>My family for their unwavering support and belief in me, even during the toughest times. ❤️</li>
+                        <li>My professor and mentor <strong> Mr. Edmund Appeadu Danso </strong> who guided me, pushed me to think critically, and shared their invaluable knowledge with me. 👨‍🏫📚</li>
+                        <li>The online programming communities and coding forums where I found help, inspiration, and motivation, including Stack Overflow, GitHub, and CodeWars from online tutors like: <br><strong>  - NYAMEKYE HAPPY</strong> 👩‍💻 <br> <strong>  - QUANSAH RANSFORD </strong> 💻 <br> <strong>  - OTOO JAMES </strong> 🤝 </li>
+                        <li>All my peers who motivated me to push forward, collaborated on projects, and shared their experiences with me. 👯‍♂️🌱</li>
+                        <li>The open-source contributors whose tools and libraries have made my learning and development easier and more efficient. 🔧💡</li>
+                        <li>Your support has been invaluable, and I couldn’t have done this without you. <br> To everyone else, keep pushing forward—you’ve got this! 🚀💪</li>    
+                        <li>Thank you for visiting my site, and I hope the resources and insights I share help you on your own learning journey! 🌍✨</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

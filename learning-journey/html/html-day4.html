@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A learning journey in web development, focusing on HTML tables and lists">
+    <title>HTML Tables and Lists - My Learning Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+        section {
+            padding: 2rem 0;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background: #0066cc;
+            color: #fff;
+        }
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .example {
+            background: #eaf5ff;
+            padding: 1rem;
+            border-left: 4px solid #0066cc;
+            margin: 1rem 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html" class="active">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container content">
+            <h1>Day 4: HTML Tables and Lists</h1>
+            <p>Today we’ll learn how to organize information in tables and lists, making it easier to display structured data and group items logically.</p>
+
+            <h2>1. HTML Tables</h2>
+            <p>Tables are created using the `<table>` element and are structured with rows `<tr>` and cells `<td>` or headers `<th>`.</p>
+
+            <div class="example">
+                Example:
+                <pre>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td>25</td>
+        <td>USA</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td>30</td>
+        <td>Canada</td>
+    </tr>
+</table>
+                </pre>
+            </div>
+
+            <h2>2. HTML Lists</h2>
+            <p>Lists are used to group items. HTML provides three main types of lists:</p>
+            <ul>
+                <li><strong>Ordered List:</strong> Displays items with numbers (<code>&lt;ol&gt;</code>)</li>
+                <li><strong>Unordered List:</strong> Displays items with bullets (<code>&lt;ul&gt;</code>)</li>
+                <li><strong>Definition List:</strong> Used for terms and their definitions (<code>&lt;dl&gt;</code>)</li>
+            </ul>
+
+            <div class="example">
+                Example:
+                <pre>
+<!-- Ordered List -->
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+<!-- Unordered List -->
+<ul>
+    <li>Frontend Development</li>
+    <li>Backend Development</li>
+    <li>Database Management</li>
+</ul>
+
+<!-- Definition List -->
+<dl>
+    <dt>HTML</dt>
+    <dd>A markup language for creating web pages.</dd>
+    <dt>CSS</dt>
+    <dd>A style sheet language for designing web pages.</dd>
+</dl>
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Challenge -->
+    <section>
+        <div class="container content">
+            <h2>Challenge</h2>
+            <p>Create a table that lists your favorite movies, with columns for:</p>
+            <ul>
+                <li>Movie Title</li>
+                <li>Release Year</li>
+                <li>Genre</li>
+            </ul>
+            <p>Then, create an unordered list of your favorite hobbies and an ordered list of your top travel destinations.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A learning journey in web development, focusing on HTML forms">
+    <title>HTML Forms - My Learning Journey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #0066cc;
+            color: #fff;
+        }
+        section {
+            padding: 2rem 0;
+        }
+        .content {
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            background: #0066cc;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #004d99;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">My Learning Journey</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="../../learningjourney.html">Learning Journey</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../../learning-journey/html/html-Introduction.html" class="active">HTML</a></li>
+                            <li><a href="../../learning-journey/css/css-introduction.html">CSS</a></li>
+                            <li><a href="../../learning-journey/java/java-introduction.html">Java</a></li>
+                            <li><a href="../../learning-journey/javascript/js-introduction.html">JavaScript</a></li>
+                            <li><a href="../../learning-journey/python/python-introduction.html">Python</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../resources.html">Resources</a></li>
+                    <li><a href="../../contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container content">
+            <h1>Day 5: HTML Forms</h1>
+            <p>Forms are a key way to gather user input on websites. Today, we’ll learn the basics of creating a form with input fields, labels, and a submit button.</p>
+
+            <h2>1. Basic Form Structure</h2>
+            <p>An HTML form begins with the `<form>` tag. Inside it, you can add input fields, labels, and buttons for user interaction.</p>
+
+            <div class="example">
+                Example:
+                <pre>
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" placeholder="Tell us about yourself"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+                </pre>
+            </div>
+
+            <h2>2. Common Input Types</h2>
+            <p>Forms include various input types, each suited for different kinds of data:</p>
+            <ul>
+                <li><code>text</code>: Single-line text input</li>
+                <li><code>email</code>: Email address input</li>
+                <li><code>password</code>: Password input (masked)</li>
+                <li><code>radio</code>: Single choice from multiple options</li>
+                <li><code>checkbox</code>: Multiple selections</li>
+                <li><code>file</code>: File upload</li>
+            </ul>
+
+            <h2>3. Validation Attributes</h2>
+            <p>You can ensure users input valid data with attributes like <code>required</code>, <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code>.</p>
+        </div>
+    </section>
+
+    <!-- Study Challenge -->
+    <section>
+        <div class="container content">
+            <h2>Challenge</h2>
+            <p>Create a registration form with the following fields:</p>
+            <ul>
+                <li>Name (text input, required)</li>
+                <li>Email (email input, required)</li>
+                <li>Password (password input, required, minimum 8 characters)</li>
+                <li>Date of Birth (date input)</li>
+                <li>Gender (radio buttons)</li>
+                <li>Agree to terms (checkbox)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="../../assets/icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="../../assets/icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" aria-label="GitHub"><img src="../../assets/icons/github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html" aria-label="Privacy Policy">Privacy Policy</a> | <a href="terms-of-service.html" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
